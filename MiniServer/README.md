@@ -24,11 +24,12 @@ Run the client
 - The fourth argument is the number of requests per thread. The client will send a total of (number of threads * number of requests per thread) requests to the server.
 
 
-Run the experiments
+## TC03 Producer-consumer
+Run the experiments:
 - Give execution permission: 
-    - chmod +x experiments.sh
+    - chmod +x experiments_producer-consumer.sh
 - Run the script and save the output: 
-    - ./experiments.sh | tee results.txt
+    - ./experiments_producer-consumer.sh | tee results_producer-consumer.txt
 - Parameters: 
     - R: number of requests per thread (5000, 500).
     - T: number of threads (1, 4, 10, 50).
@@ -37,4 +38,20 @@ Run the experiments
     - Q: capacity of the queue (1, 16, 100).
 - Each combination is run 3 times and the time is averaged.
 - Throughput = (T * R / time)
-- The raw data is in "results.xlxs" (sheet "in").
+- The raw data is in "results_producer-consumer.xlxs" (sheet "in").
+
+## TC04 Semaphores
+Run the experiments:
+- Give execution permission: 
+    - chmod +x experiments_semaphores.sh
+- Run the script and save the output: 
+    - ./experiments_semaphores.sh | tee results_semaphores.txt
+- Parameters: 
+    - R: number of requests per thread (5000, 500).
+    - T: number of threads (1, 4, 10, 50).
+    - N: number of cores for the server (1, 2, 4). 
+    - K: counting semaphore initial value [max active threads] (...).
+- Each combination is run 3 times and the time is averaged.
+- Throughput = (T * R / time)
+- The raw data is in "results_semaphores.xlxs" (sheet "in").
+
