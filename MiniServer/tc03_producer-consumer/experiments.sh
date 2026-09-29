@@ -1,3 +1,6 @@
+#!/bin/bash
+cd "$(dirname "$0")/.."
+
 for R in 5000 500; do #R = number of requests per thread
     for T in 1 4 10 50; do #T = number of threads
         for N in 1 2 4; do #N = number of cores

@@ -28,7 +28,7 @@ Run the experiments
 - Give execution permission: 
     - chmod +x experiments.sh
 - Run the script and save the output: 
-    - ./experiments.sh | tee resultados.txt
+    - ./experiments.sh | tee results.txt
 - Parameters: 
     - R: number of requests per thread (5000, 500).
     - T: number of threads (1, 4, 10, 50).
