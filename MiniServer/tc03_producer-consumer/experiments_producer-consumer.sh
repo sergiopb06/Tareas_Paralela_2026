@@ -40,7 +40,7 @@ for R in 5000 500; do #R = number of requests per thread
 
                     avg=$(awk -v t="$total" 'BEGIN{print t/3}')
                     tp=$(awk -v h="$T" -v r="$R" -v t="$avg" 'BEGIN{print h*r/t}') #how many request per second the server handles
-                    echo "R=$R T=$T N=$N C=$C Q=$Q  tiempo=$avg throughput=$tp"
+                    echo "R=$R T=$T N=$N C=$C Q=$Q  time=$avg throughput=$tp"
                 done
             done
         done

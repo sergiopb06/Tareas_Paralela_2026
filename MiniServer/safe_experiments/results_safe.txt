@@ -1,0 +1,144 @@
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=1 time=0.389873 throughput=12824.7
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=2 time=0.383403 throughput=13041.1
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=4 time=0.376023 throughput=13297.1
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=1 time=1.14504 throughput=17466.6
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=2 time=0.68837 throughput=29054.1
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=4 time=0.47968 throughput=41694.5
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=1 time=2.70463 throughput=18486.8
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=2 time=1.72009 throughput=29068.2
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=4 time=1.09309 throughput=45741.9
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=1 time=13.0745 throughput=19121.2
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=2 time=7.94843 throughput=31452.8
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=4 time=5.3318 throughput=46888.5
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=1 time=0.0434413 throughput=11509.8
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=2 time=0.0413933 throughput=12079.2
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=4 time=0.0421803 throughput=11853.9
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=1 time=0.119573 throughput=16726.2
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=2 time=0.0726887 throughput=27514.6
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=4 time=0.0526077 throughput=38017.2
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=1 time=0.286483 throughput=17453
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=2 time=0.180611 throughput=27683.8
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=4 time=0.116431 throughput=42943.9
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=1 time=1.40342 throughput=17813.6
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=2 time=0.848137 throughput=29476.4
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=4 time=0.5816 throughput=42984.9
+requests completed: 100
+requests completed: 100
+requests completed: 100
+R=100 T=1 N=1 time=0.013051 throughput=7662.25
+requests completed: 100
+requests completed: 100
+requests completed: 100
+R=100 T=1 N=2 time=0.0130092 throughput=7686.87
+requests completed: 100
+requests completed: 100
+requests completed: 100
+R=100 T=1 N=4 time=0.0128113 throughput=7805.61
+requests completed: 400
+requests completed: 400
+requests completed: 400
+R=100 T=4 N=1 time=0.0277991 throughput=14389
+requests completed: 400
+requests completed: 400
+requests completed: 400
+R=100 T=4 N=2 time=0.0188254 throughput=21247.9
+requests completed: 400
+requests completed: 400
+requests completed: 400
+R=100 T=4 N=4 time=0.0150383 throughput=26598.8
+requests completed: 1000
+requests completed: 1000
+requests completed: 1000
+R=100 T=10 N=1 time=0.0613973 throughput=16287.4
+requests completed: 1000
+requests completed: 1000
+requests completed: 1000
+R=100 T=10 N=2 time=0.0400723 throughput=24954.9
+requests completed: 1000
+requests completed: 1000
+requests completed: 1000
+R=100 T=10 N=4 time=0.0260997 throughput=38314.6
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=100 T=50 N=1 time=0.288671 throughput=17320.8
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=100 T=50 N=2 time=0.174942 throughput=28580.9
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=100 T=50 N=4 time=0.121849 throughput=41034.4
