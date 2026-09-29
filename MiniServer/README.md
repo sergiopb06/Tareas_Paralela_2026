@@ -1,4 +1,4 @@
-##Mini Server
+## Mini Server
 
 Instructions to set up a mini server:
 
