@@ -1,0 +1,864 @@
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=1 C=1 Q=1  tiempo=0.325228 throughput=15373.8
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=1 C=1 Q=16  tiempo=0.352817 throughput=14171.7
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=1 C=1 Q=100  tiempo=0.34519 throughput=14484.8
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=1 C=4 Q=1  tiempo=0.3396 throughput=14723.2
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=1 C=4 Q=16  tiempo=0.32483 throughput=15392.7
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=1 C=4 Q=100  tiempo=0.37422 throughput=13361.1
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=1 C=20 Q=1  tiempo=0.352673 throughput=14177.4
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=1 C=20 Q=16  tiempo=0.328785 throughput=15207.5
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=1 C=20 Q=100  tiempo=0.330192 throughput=15142.7
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=2 C=1 Q=1  tiempo=0.312855 throughput=15981.8
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=2 C=1 Q=16  tiempo=0.313335 throughput=15957.4
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=2 C=1 Q=100  tiempo=0.318049 throughput=15720.8
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=2 C=4 Q=1  tiempo=0.314476 throughput=15899.5
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=2 C=4 Q=16  tiempo=0.314307 throughput=15908
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=2 C=4 Q=100  tiempo=0.311121 throughput=16070.9
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=2 C=20 Q=1  tiempo=0.325906 throughput=15341.8
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=2 C=20 Q=16  tiempo=0.330253 throughput=15139.9
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=2 C=20 Q=100  tiempo=0.315888 throughput=15828.4
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=4 C=1 Q=1  tiempo=0.307356 throughput=16267.8
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=4 C=1 Q=16  tiempo=0.310528 throughput=16101.6
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=4 C=1 Q=100  tiempo=0.311474 throughput=16052.7
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=4 C=4 Q=1  tiempo=0.313065 throughput=15971.1
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=4 C=4 Q=16  tiempo=0.332609 throughput=15032.7
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=4 C=4 Q=100  tiempo=0.307643 throughput=16252.6
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=4 C=20 Q=1  tiempo=0.316688 throughput=15788.4
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=4 C=20 Q=16  tiempo=0.33044 throughput=15131.3
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=5000 T=1 N=4 C=20 Q=100  tiempo=0.317065 throughput=15769.6
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=1 C=1 Q=1  tiempo=0.60786 throughput=32902.3
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=1 C=1 Q=16  tiempo=0.46902 throughput=42642.1
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=1 C=1 Q=100  tiempo=0.486273 throughput=41129.2
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=1 C=4 Q=1  tiempo=0.729147 throughput=27429.3
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=1 C=4 Q=16  tiempo=0.70666 throughput=28302.2
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=1 C=4 Q=100  tiempo=0.68538 throughput=29180.9
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=1 C=20 Q=1  tiempo=0.72255 throughput=27679.7
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=1 C=20 Q=16  tiempo=0.72597 throughput=27549.3
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=1 C=20 Q=100  tiempo=0.685437 throughput=29178.5
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=2 C=1 Q=1  tiempo=0.431407 throughput=46359.9
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=2 C=1 Q=16  tiempo=0.404563 throughput=49436.1
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=2 C=1 Q=100  tiempo=0.406143 throughput=49243.7
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=2 C=4 Q=1  tiempo=0.419293 throughput=47699.3
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=2 C=4 Q=16  tiempo=0.42998 throughput=46513.8
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=2 C=4 Q=100  tiempo=0.422143 throughput=47377.3
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=2 C=20 Q=1  tiempo=0.417097 throughput=47950.5
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=2 C=20 Q=16  tiempo=0.439097 throughput=45548
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=2 C=20 Q=100  tiempo=0.436193 throughput=45851.3
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=4 C=1 Q=1  tiempo=0.39628 throughput=50469.4
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=4 C=1 Q=16  tiempo=0.404413 throughput=49454.4
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=4 C=1 Q=100  tiempo=0.40427 throughput=49471.9
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=4 C=4 Q=1  tiempo=0.42539 throughput=47015.7
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=4 C=4 Q=16  tiempo=0.415997 throughput=48077.3
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=4 C=4 Q=100  tiempo=0.417343 throughput=47922.2
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=4 C=20 Q=1  tiempo=0.445873 throughput=44855.8
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=4 C=20 Q=16  tiempo=0.422597 throughput=47326.4
+requests completed: 20000
+requests completed: 20000
+requests completed: 20000
+R=5000 T=4 N=4 C=20 Q=100  tiempo=0.406043 throughput=49255.9
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=1 C=1 Q=1  tiempo=1.337 throughput=37397.2
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=1 C=1 Q=16  tiempo=1.02021 throughput=49009.5
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=1 C=1 Q=100  tiempo=1.0263 throughput=48718.7
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=1 C=4 Q=1  tiempo=1.68573 throughput=29660.7
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=1 C=4 Q=16  tiempo=1.39976 throughput=35720.4
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=1 C=4 Q=100  tiempo=1.38745 throughput=36037.3
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=1 C=20 Q=1  tiempo=1.67664 throughput=29821.5
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=1 C=20 Q=16  tiempo=1.64586 throughput=30379.3
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=1 C=20 Q=100  tiempo=1.63705 throughput=30542.7
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=2 C=1 Q=1  tiempo=0.91022 throughput=54931.8
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=2 C=1 Q=16  tiempo=0.896357 throughput=55781.3
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=2 C=1 Q=100  tiempo=0.893587 throughput=55954.3
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=2 C=4 Q=1  tiempo=0.93725 throughput=53347.6
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=2 C=4 Q=16  tiempo=0.897043 throughput=55738.7
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=2 C=4 Q=100  tiempo=0.908643 throughput=55027.1
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=2 C=20 Q=1  tiempo=1.20922 throughput=41349
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=2 C=20 Q=16  tiempo=1.08552 throughput=46060.9
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=2 C=20 Q=100  tiempo=1.07024 throughput=46718.5
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=4 C=1 Q=1  tiempo=0.913897 throughput=54710.8
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=4 C=1 Q=16  tiempo=0.87861 throughput=56908.1
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=4 C=1 Q=100  tiempo=0.889203 throughput=56230.1
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=4 C=4 Q=1  tiempo=0.863867 throughput=57879.3
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=4 C=4 Q=16  tiempo=0.885503 throughput=56465.1
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=4 C=4 Q=100  tiempo=0.917947 throughput=54469.4
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=4 C=20 Q=1  tiempo=0.91687 throughput=54533.4
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=4 C=20 Q=16  tiempo=0.883687 throughput=56581.1
+requests completed: 50000
+requests completed: 50000
+requests completed: 50000
+R=5000 T=10 N=4 C=20 Q=100  tiempo=0.876757 throughput=57028.3
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=1 C=1 Q=1  tiempo=6.41183 throughput=38990.4
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=1 C=1 Q=16  tiempo=6.48437 throughput=38554.2
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=1 C=1 Q=100  tiempo=4.92873 throughput=50723
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=1 C=4 Q=1  tiempo=8.2791 throughput=30196.5
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=1 C=4 Q=16  tiempo=8.1915 throughput=30519.4
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=1 C=4 Q=100  tiempo=6.8532 throughput=36479.3
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=1 C=20 Q=1  tiempo=8.22113 throughput=30409.4
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=1 C=20 Q=16  tiempo=8.197 throughput=30499
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=1 C=20 Q=100  tiempo=6.82243 throughput=36643.8
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=2 C=1 Q=1  tiempo=4.15057 throughput=60232.7
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=2 C=1 Q=16  tiempo=4.13407 throughput=60473.1
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=2 C=1 Q=100  tiempo=4.18773 throughput=59698.2
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=2 C=4 Q=1  tiempo=4.28237 throughput=58378.9
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=2 C=4 Q=16  tiempo=4.1315 throughput=60510.7
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=2 C=4 Q=100  tiempo=4.03203 throughput=62003.5
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=2 C=20 Q=1  tiempo=4.6717 throughput=53513.7
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=2 C=20 Q=16  tiempo=4.37267 throughput=57173.3
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=2 C=20 Q=100  tiempo=4.1914 throughput=59645.9
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=4 C=1 Q=1  tiempo=4.12483 throughput=60608.6
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=4 C=1 Q=16  tiempo=4.11743 throughput=60717.5
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=4 C=1 Q=100  tiempo=4.10337 throughput=60925.5
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=4 C=4 Q=1  tiempo=4.1347 throughput=60463.9
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=4 C=4 Q=16  tiempo=4.0477 throughput=61763.5
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=4 C=4 Q=100  tiempo=4.058 throughput=61606.7
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=4 C=20 Q=1  tiempo=4.06293 throughput=61531.9
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=4 C=20 Q=16  tiempo=4.0786 throughput=61295.5
+requests completed: 250000
+requests completed: 250000
+requests completed: 250000
+R=5000 T=50 N=4 C=20 Q=100  tiempo=4.05623 throughput=61633.6
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=1 C=1 Q=1  tiempo=0.038942 throughput=12839.6
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=1 C=1 Q=16  tiempo=0.0397587 throughput=12575.9
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=1 C=1 Q=100  tiempo=0.0406993 throughput=12285.2
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=1 C=4 Q=1  tiempo=0.0396637 throughput=12606
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=1 C=4 Q=16  tiempo=0.0380433 throughput=13142.9
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=1 C=4 Q=100  tiempo=0.037816 throughput=13221.9
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=1 C=20 Q=1  tiempo=0.0390297 throughput=12810.8
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=1 C=20 Q=16  tiempo=0.0385357 throughput=12975
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=1 C=20 Q=100  tiempo=0.039087 throughput=12792
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=2 C=1 Q=1  tiempo=0.0362047 throughput=13810.4
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=2 C=1 Q=16  tiempo=0.0371727 throughput=13450.7
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=2 C=1 Q=100  tiempo=0.03645 throughput=13717.4
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=2 C=4 Q=1  tiempo=0.0362683 throughput=13786.1
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=2 C=4 Q=16  tiempo=0.0369553 throughput=13529.9
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=2 C=4 Q=100  tiempo=0.037434 throughput=13356.8
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=2 C=20 Q=1  tiempo=0.0371743 throughput=13450.2
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=2 C=20 Q=16  tiempo=0.0380297 throughput=13147.6
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=2 C=20 Q=100  tiempo=0.0398037 throughput=12561.6
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=4 C=1 Q=1  tiempo=0.0362807 throughput=13781.4
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=4 C=1 Q=16  tiempo=0.0377447 throughput=13246.9
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=4 C=1 Q=100  tiempo=0.0369677 throughput=13525.3
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=4 C=4 Q=1  tiempo=0.0371473 throughput=13459.9
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=4 C=4 Q=16  tiempo=0.0370893 throughput=13481
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=4 C=4 Q=100  tiempo=0.037439 throughput=13355.1
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=4 C=20 Q=1  tiempo=0.0368947 throughput=13552.1
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=4 C=20 Q=16  tiempo=0.036712 throughput=13619.5
+requests completed: 500
+requests completed: 500
+requests completed: 500
+R=500 T=1 N=4 C=20 Q=100  tiempo=0.0367583 throughput=13602.4
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=1 C=1 Q=1  tiempo=0.065892 throughput=30352.7
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=1 C=1 Q=16  tiempo=0.0509373 throughput=39264
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=1 C=1 Q=100  tiempo=0.0538263 throughput=37156.6
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=1 C=4 Q=1  tiempo=0.076832 throughput=26030.8
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=1 C=4 Q=16  tiempo=0.074817 throughput=26731.9
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=1 C=4 Q=100  tiempo=0.0937947 throughput=21323.2
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=1 C=20 Q=1  tiempo=0.0875693 throughput=22839.1
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=1 C=20 Q=16  tiempo=0.074309 throughput=26914.6
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=1 C=20 Q=100  tiempo=0.073489 throughput=27215
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=2 C=1 Q=1  tiempo=0.0459987 throughput=43479.5
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=2 C=1 Q=16  tiempo=0.0458057 throughput=43662.7
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=2 C=1 Q=100  tiempo=0.0455927 throughput=43866.7
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=2 C=4 Q=1  tiempo=0.0521457 throughput=38354.1
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=2 C=4 Q=16  tiempo=0.0487057 throughput=41063
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=2 C=4 Q=100  tiempo=0.0486217 throughput=41133.9
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=2 C=20 Q=1  tiempo=0.0531593 throughput=37622.8
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=2 C=20 Q=16  tiempo=0.0502663 throughput=39788.1
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=2 C=20 Q=100  tiempo=0.0509927 throughput=39221.3
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=4 C=1 Q=1  tiempo=0.046759 throughput=42772.5
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=4 C=1 Q=16  tiempo=0.0450257 throughput=44419.1
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=4 C=1 Q=100  tiempo=0.0464493 throughput=43057.7
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=4 C=4 Q=1  tiempo=0.0459013 throughput=43571.8
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=4 C=4 Q=16  tiempo=0.045793 throughput=43674.8
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=4 C=4 Q=100  tiempo=0.0472227 throughput=42352.5
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=4 C=20 Q=1  tiempo=0.0455017 throughput=43954.4
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=4 C=20 Q=16  tiempo=0.0465787 throughput=42938.1
+requests completed: 2000
+requests completed: 2000
+requests completed: 2000
+R=500 T=4 N=4 C=20 Q=100  tiempo=0.0465723 throughput=42944
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=1 C=1 Q=1  tiempo=0.13729 throughput=36419.3
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=1 C=1 Q=16  tiempo=0.106667 throughput=46874.9
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=1 C=1 Q=100  tiempo=0.111185 throughput=44970.1
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=1 C=4 Q=1  tiempo=0.190335 throughput=26269.5
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=1 C=4 Q=16  tiempo=0.153481 throughput=32577.3
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=1 C=4 Q=100  tiempo=0.150469 throughput=33229.4
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=1 C=20 Q=1  tiempo=0.178851 throughput=27956.2
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=1 C=20 Q=16  tiempo=0.176015 throughput=28406.7
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=1 C=20 Q=100  tiempo=0.177927 throughput=28101.4
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=2 C=1 Q=1  tiempo=0.0971973 throughput=51441.8
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=2 C=1 Q=16  tiempo=0.0966363 throughput=51740.4
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=2 C=1 Q=100  tiempo=0.0957927 throughput=52196
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=2 C=4 Q=1  tiempo=0.102235 throughput=48906.9
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=2 C=4 Q=16  tiempo=0.0991957 throughput=50405.4
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=2 C=4 Q=100  tiempo=0.107834 throughput=46367.6
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=2 C=20 Q=1  tiempo=0.117241 throughput=42647.2
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=2 C=20 Q=16  tiempo=0.119635 throughput=41793.8
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=2 C=20 Q=100  tiempo=0.112484 throughput=44450.8
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=4 C=1 Q=1  tiempo=0.0983527 throughput=50837.4
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=4 C=1 Q=16  tiempo=0.0961447 throughput=52004.9
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=4 C=1 Q=100  tiempo=0.0966103 throughput=51754.3
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=4 C=4 Q=1  tiempo=0.0950473 throughput=52605.4
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=4 C=4 Q=16  tiempo=0.09469 throughput=52803.9
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=4 C=4 Q=100  tiempo=0.0943793 throughput=52977.7
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=4 C=20 Q=1  tiempo=0.0994763 throughput=50263.2
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=4 C=20 Q=16  tiempo=0.0940353 throughput=53171.5
+requests completed: 5000
+requests completed: 5000
+requests completed: 5000
+R=500 T=10 N=4 C=20 Q=100  tiempo=0.0967303 throughput=51690.1
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=1 C=1 Q=1  tiempo=0.69215 throughput=36119.3
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=1 C=1 Q=16  tiempo=0.679577 throughput=36787.6
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=1 C=1 Q=100  tiempo=0.499833 throughput=50016.7
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=1 C=4 Q=1  tiempo=0.866907 throughput=28838.2
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=1 C=4 Q=16  tiempo=0.865517 throughput=28884.5
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=1 C=4 Q=100  tiempo=0.730247 throughput=34235
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=1 C=20 Q=1  tiempo=0.863543 throughput=28950.5
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=1 C=20 Q=16  tiempo=0.854977 throughput=29240.6
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=1 C=20 Q=100  tiempo=0.730493 throughput=34223.5
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=2 C=1 Q=1  tiempo=0.43125 throughput=57971
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=2 C=1 Q=16  tiempo=0.435517 throughput=57403
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=2 C=1 Q=100  tiempo=0.43031 throughput=58097.7
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=2 C=4 Q=1  tiempo=0.45848 throughput=54528
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=2 C=4 Q=16  tiempo=0.445113 throughput=56165.5
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=2 C=4 Q=100  tiempo=0.42179 throughput=59271.2
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=2 C=20 Q=1  tiempo=0.499503 throughput=50049.7
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=2 C=20 Q=16  tiempo=0.493427 throughput=50666.1
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=2 C=20 Q=100  tiempo=0.45564 throughput=54867.9
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=4 C=1 Q=1  tiempo=0.434533 throughput=57533
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=4 C=1 Q=16  tiempo=0.456393 throughput=54777.4
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=4 C=1 Q=100  tiempo=0.438703 throughput=56986.2
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=4 C=4 Q=1  tiempo=0.46271 throughput=54029.5
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=4 C=4 Q=16  tiempo=0.447443 throughput=55873
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=4 C=4 Q=100  tiempo=0.435283 throughput=57433.9
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=4 C=20 Q=1  tiempo=0.441283 throughput=56653
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=4 C=20 Q=16  tiempo=0.45318 throughput=55165.7
+requests completed: 25000
+requests completed: 25000
+requests completed: 25000
+R=500 T=50 N=4 C=20 Q=100  tiempo=0.46877 throughput=53331.1
