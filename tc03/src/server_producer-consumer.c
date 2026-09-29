@@ -12,9 +12,13 @@
 
 #define _POSIX_C_SOURCE 200809L
 
-
+#ifndef NUM_CONSUMERS
 #define NUM_CONSUMERS 4  //threads
+#endif
+
+#ifndef QUEUE_CAPACITY
 #define QUEUE_CAPACITY 16 //buffer of connections
+#endif
 
 #define DEFAULT_PORT 8080
 #define LISTEN_BACKLOG 64

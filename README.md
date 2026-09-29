@@ -1,1 +1,0 @@
-# Tareas_Paralela_2026
