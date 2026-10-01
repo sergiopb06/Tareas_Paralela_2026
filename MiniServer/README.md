@@ -23,18 +23,50 @@ Run the client
 - The third argument is the number of threads.
 - The fourth argument is the number of requests per thread. The client will send a total of (number of threads * number of requests per thread) requests to the server.
 
+Run the experiments:
+- For all the experiments.sh:
+    - Each combination is run 3 times and the time is averaged.
+    - Throughput = (T * R / time)
 
-Run the experiments
-- Give execution permission: 
-    - chmod +x experiments.sh
+- Server safe  
+    - Give execution permission (only the first time): 
+        - chmod +x experiments_safe.sh
+    - Run the script and save the output: 
+        - ./experiments_safe.sh | tee results_safe.txt
+    - Parameters: 
+        - R: number of requests per thread (5000, 500, 100).
+        - T: number of threads (1, 4, 10, 50).
+        - N: number of cores for the server (1, 2, 4). 
+    - The raw data is in "results_safe.xlxs" (sheet "in").
+
+
+
+## TC03 Producer-consumer
+Run the experiments:
+- Give execution permission (only the first time): 
+    - chmod +x experiments_producer-consumer.sh
 - Run the script and save the output: 
-    - ./experiments.sh | tee results.txt
+    - ./experiments_producer-consumer.sh | tee results_producer-consumer.txt
 - Parameters: 
     - R: number of requests per thread (5000, 500).
     - T: number of threads (1, 4, 10, 50).
     - N: number of cores for the server (1, 2, 4). 
     - C: number of consumers (1, 4, 20).
     - Q: capacity of the queue (1, 16, 100).
-- Each combination is run 3 times and the time is averaged.
-- Throughput = (T * R / time)
-- The raw data is in "results.xlxs" (sheet "in").
+- The raw data is in "results_producer-consumer.xlxs" (sheet "in").
+
+
+
+## TC04 Semaphores
+Run the experiments:
+- Give execution permission (only the first time): 
+    - chmod +x experiments_semaphores.sh
+- Run the script and save the output: 
+    - ./experiments_semaphores.sh | tee results_semaphores.txt
+- Parameters: 
+    - R: number of requests per thread (5000, 500, 100).
+    - T: number of threads (1, 4, 10, 50).
+    - N: number of cores for the server (1, 2, 4). 
+    - K: counting semaphore initial value [max active threads] (...).
+- The raw data is in "results_semaphores.xlxs" (sheet "in").
+
