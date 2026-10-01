@@ -67,6 +67,6 @@ Run the experiments:
     - R: number of requests per thread (5000, 500, 100).
     - T: number of threads (1, 4, 10, 50).
     - N: number of cores for the server (1, 2, 4). 
-    - K: counting semaphore initial value [max active threads] (...).
+    - K: counting semaphore initial value [max active threads] (1, 4, 16, 64).
 - The raw data is in "results_semaphores.xlxs" (sheet "in").
 
