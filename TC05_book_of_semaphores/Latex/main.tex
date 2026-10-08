@@ -1,0 +1,413 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+
+
+\documentclass[]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+
+\usepackage[top=2.54cm, bottom=2.54cm]{geometry}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{indentfirst}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0pt}
+
+
+\usepackage{titlesec}
+\titleformat{\section}[block]{\normalfont\bfseries\filcenter}{}{0em}{}
+\setcounter{secnumdepth}{-\maxdimen} 
+
+\usepackage{hanging}
+\usepackage{float}
+
+\usepackage{xurl} 
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+
+
+\newcommand{\imagen}[1]{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{#1}
+    \end{figure}
+}
+
+
+\begin{document}
+    \begin{center}
+        \vspace*{2cm}
+        \textbf{Tarea Corta 05: Capítulos de \emph{Little Book of Semaphores}}
+
+        Sergio Peralta Barboza
+
+        Escuela de Ciencias de la Computación e Informática, Universidad de Costa Rica
+
+        CI-0117 Programación Paralela y Concurrente, Grupo 01
+
+        Ing. Sleyter Angulo, M.Sc
+
+        Jueves 8 de octubre de 2026
+    \end{center}
+\newpage
+
+
+\section*{Readers-writers problem}
+
+    El readers-writers problem ocurre cuando una estructura de datos
+    compartida es leída y modificada por hilos concurrentes. Mientras se
+    escribe, hay que impedir que otros hilos puedan acceder a la estructura,
+    ya que podrían leer datos inconsistentes o erróneos. El problema indica
+    que cualquier cantidad de lectores puede estar en la sección crítica del
+    programa a la vez. Mientras los escritores deben tener acceso exclusivo
+    a la sección crítica, es decir, solo puede haber un escritor en la
+    estructura, nadie más. Esto se llama exclusión mutua categórica; la
+    presencia de una categoría (lectores) excluye a otra (escritores), pero
+    no a sus propios miembros.
+    
+    Para la solución a este problema se propone lo siguiente:
+    
+    \imagen{./12619979f0363bbc10758ba58951b3c2c3ece808.png}
+    Este es el código para los escritores; significa que si la sala está
+    vacía, el escritor puede entrar y excluir a todos los otros hilos de
+    entrar; al salir, se asegura de que la sala está vacía. Para los
+    lectores:
+    
+    \imagen{./1a548f8e7e14257ebd38eff99ee74a14fda865fa.png}
+    Este código funciona de la siguiente forma: cuando un lector quiere
+    entrar, se verifica si es el primero; si lo es, señala que el cuarto no
+    está vacío. Sin embargo, igualmente permite que otros lectores sigan
+    entrando. Conforme salen, si un lector es el último en salir, señala que
+    el cuarto ahora está vacío. Si el lector intenta entrar mientras hay un
+    escritor en el cuarto, espera en el semáforo del cuarto mientras tiene
+    el mutex. Esto significa que todos los otros lectores que quieran entrar
+    van a esperar en el mutex, no en el semáforo. El capítulo explica que
+    este patrón es común y que se puede empaquetar en una clase
+    \emph{Lightswitch:} el primero que entra prende las luces, el último que
+    sale las apaga:
+    
+    \imagen{./57c19d305fd96d866700d7762bca014a3bbc4ffd.png}
+    Con esta clase, el código queda más simple:
+    
+    \imagen{./79c8367efd751136c359f528bcb96c12243f8286.png}
+    
+    Esta solución presenta un problema, \emph{starvation}: si un escritor
+    llega mientras hay lectores en cola, mientras sigan llegando lectores
+    antes que el último se vaya, el escritor nunca logra entrar a la cola,
+    haciendo que espere indefinidamente para escribir. Por eso se presenta
+    el problema de \emph{No-starve}, para modificar el código y que el
+    escritor no sufra de \emph{starvation}.
+
+
+\section*{No-starve readers-writers}
+
+    Para la solución de este problema se utiliza una barra de acceso
+    (torniquete). Cuando un lector llega, si el torniquete está abierto,
+    sigue con normalidad y entra a la sección crítica. Si un escritor llega
+    en la cola, cierra el torniquete y espera a que el cuarto esté vacío. El
+    escritor espera a que todos los lectores que estén dentro del cuarto
+    terminen su trabajo, y cuando lo hacen, entra al cuarto. Los nuevos
+    lectores que llegan esperan su turno hasta que se abra el torniquete, el
+    cual es abierto por el escritor una vez termine su trabajo y salga del
+    cuarto. Esto asegura que el escritor avance su turno y que los lectores
+    esperen mientras lo hace. Los lectores no tocan el torniquete, solo
+    pasan por él. La solución propuesta es la siguiente:
+    
+    \imagen{./a262dc38ab13f6cdcc6cf855da083e4bf21d5a41.png}
+    \imagen{./d820d893b596b7083a1936dae934052c1425ae1e.png}
+    
+    Sin embargo, esta solución solo resuelve que al menos un escritor avance
+    en la cola. Pero no garantiza que todos los escritores avancen; cuando
+    el escritor termina, es decisión del planificador quién despierta; un
+    lector puede colarse delante de un escritor. Por eso hay que crear una
+    solución que le dé prioridad a los escritores.
+
+\section*{Writer-priority readers-writers}
+
+    Para la solución de este problema, se reemplaza el semáforo de la
+    habitación y el torniquete por un semáforo que indica cuándo hay
+    lectores y otro de cuándo hay escritores. El lector pasa por
+    \emph{noReaders}, igual que en el torniquete, y mientras tiene
+    \emph{noReaders}, si es el primero, agarra \emph{noWriters}. Esto
+    garantiza que, mientras haya lectores dentro de la habitación, no pueden
+    entrar escritores. El escritor primero agarra \emph{noReaders}; esto
+    hace que, cuando llega un escritor, bloquee que entren los lectores
+    hasta que todos los escritores terminen su trabajo. Los demás escritores
+    que lleguen no tocan el semáforo de los lectores, van esperando su turno
+    para hacer su trabajo y, cuando ya no hay escritores en la cola, liberan
+    \emph{noReaders} y permiten a los lectores avanzar. La solución
+    propuesta es:
+    
+    \imagen{./390928aba978bc85f7165197da3c6ef2f044a487.png}
+    \imagen{./d269e73feee2cdc30a10f07d255bffe6bc04802b.png}
+    \imagen{./f1750fc7d3508043fee08368e66868b8e6241762.png}
+    
+    Esta solución crea el problema inverso; ahora los lectores pueden sufrir de
+    \emph{starvation}. La implementación que se use depende de la
+    aplicación.
+    
+\section*{No-starve mutex}
+
+    En la sección anterior, el problema era \emph{categorical starvation}.
+    Una categoría (lectores) dejaba sin turno a otra (escritores). Ahora el
+    problema es \emph{thread starvation}, que un hilo espere indefinidamente
+    mientras otros avanzan. Para resolverlo se exige \emph{bounded waiting};
+    el tiempo que un hilo espera en un semáforo debe ser demostrablemente
+    finito. Para demostrar que no existe \emph{starvation}, se realizan las
+    siguientes suposiciones sobre quién decide el orden del hilo:
+    
+    \begin{enumerate}
+    \def\labelenumi{\arabic{enumi}.}
+    \item
+      Si solo hay un hilo listo para correr, el planificador debe dejarlo
+      correr.
+    \item
+      Si un hilo está listo para correr, el tiempo que espera para hacerlo
+      está acotado.
+    \item
+      Si hay hilos esperando en un semáforo y alguien hace signal, uno de
+      los que esperan debe despertar.
+    \item
+      Si un hilo espera en un semáforo, el número de hilos que despertarán
+      antes que él está acotado.
+    \end{enumerate}
+    
+    Los semáforos que tienen la propiedad cuatro se llaman semáforo fuerte
+    (\emph{strong}) y los que tienen solo la propiedad tres se llaman
+    semáforo débil (\emph{weak}). Para resolver una conjetura de Dijkstra,
+    que propuso que no se puede resolver la exclusión mutua sin
+    \emph{starvation} usando solo semáforos débiles. En 1979, J.M. Morris lo
+    refutó suponiendo un número finito de hilos.
+    
+    Su algoritmo usa dos torniquetes (t1 y t2) que forman dos salas de
+    espera antes de la sección crítica; funciona en dos fases. En la
+    primera, t1 está abierto y t2 cerrado, así que los hilos se acumulan en
+    la segunda sala. En la segunda, t1 se cierra y t2 se abre; los hilos
+    acumulados pasan a la sección crítica. Los contadores room1 y room2
+    indican cuántos hilos hay en cada sala y un mutex protege room1. El
+    último hilo en cruzar la sala 1 abre t2; el último en salir de la sala 2
+    lo vuelve a abrir. La solución descrita es la siguiente:
+    
+    \imagen{./4d2685eeec27d4a91ba15d23f71948ba7264098f.png}
+
+\section*{Cigarrete Smokers problem}
+
+    El siguiente caso, \emph{Cigarette Smokers Problem}, fue presentado por
+    Suhas Patil. El problema dice que hay cuatro hilos: un agente y tres
+    fumadores. Para fumar, un fumador necesita tres ingredientes: tabaco,
+    papel y fósforos. Se asume que:
+    
+    \begin{itemize}
+    \item
+      Cada fumador tiene una provisión infinita de un solo ingrediente (uno
+      tiene tabaco, otro papel, otro fosforos).
+    \item
+      El agente tiene provisiones infinitas de los tres. Repetidamente,
+      elige dos ingredientes distintos al azar y los pone en la mesa.
+    \item
+      El fumador que tiene el ingrediente que falta debe tomar los dos de la
+      mesa, hacer el cigarro, fumar y avisarle al agente para que ponga
+      otros dos.
+    \end{itemize}
+    
+    El agente representa un sistema operativo que asigna recursos; los
+    fumadores, aplicaciones que necesitan dichos recursos. Existen tres
+    versiones del problema, pero se resolverá la versión interesante, que
+    dice que no se puede modificar el código del agente, el cual es:
+    
+    \imagen{./44b78f08607f86493fd3635819c659e2ccbe5891.png}
+    
+    El agente son tres hilos (A, B, C) que esperan en el semáforo de
+    \emph{agentSem}. Cada vez que se hace \emph{signal} de este, uno de los
+    tres despierta y pone dos ingredientes en la mesa utilizando los
+    semáforos de ingredientes.
+    
+    \imagen{./2f432fad0800aa3ff84c77ebd44785e51032e1d6.png}
+    
+    Sin embargo, la solución natural no funciona, la cual se basa en que
+    cada fumador espere sus dos ingredientes. Falla por un \emph{deadlock}.
+    Por ejemplo, si el agente pone tabaco y papel, el fumador con fósforos
+    espera tabaco y papel; puede avanzar. Pero el fumador con tabaco espera
+    papel; también puede despertar. Un fumador toma tabaco y otro papel.
+    Entonces, el primero queda esperando el papel y el segundo queda
+    esperando fósforos, que nunca van a llegar; se crea un \emph{deadlock}.
+    
+    La solución que propuso Parnas consiste en agregar tres hilos
+    auxiliares, pusher, cada uno asociado a un ingrediente. Cuando el agente
+    pone un ingrediente, el pusher correspondiente revisa con un
+    \emph{mutex} si el otro ingrediente que completa el par ya está en la
+    mesa. Si es así, señala al fumador adecuado y limpia la variable
+    booleana; si no, solo registra que su ingrediente está disponible. Los
+    fumadores ahora solo esperan por un único semáforo, que solo se activa
+    cuando los dos ingredientes que necesita están listos:
+    
+    \imagen{./6ff42e8d9625cc65557b3a2102311ee4bf503004.png}
+    \imagen{./bf41038b2657956f53933597575149bc19b7f0d6.png}
+    \imagen{./10be9ea54de8a8afc9f67a6ce7873c5feff141ba.png}
+    
+\section*{Generalized Smokers problem}
+    
+    En la versión anterior, el agente ponía dos ingredientes en la mesa y
+    esperaba a que un fumador terminara antes de poner otros. Eso
+    garantizaba que en la mesa nunca hubiera más de un par. Parnas propone
+    quitar esa espera: el agente sigue poniendo ingredientes sin esperar a
+    nadie. Ahora puede haber repeticiones de los ingredientes que hay en la
+    mesa. Como el agente ya no espera, \emph{agentSem} ya no se usa. Además,
+    se dejan de usar valores booleanos para los ingredientes; ahora se
+    cuentan las unidades.
+    
+    \imagen{./0ba91c05a46a74dc856b857afdb63ea9a381b32c.png}
+    
+    El resto de la estructura se mantiene: cada \emph{pusher} espera la señal
+    del agente, toma el \emph{mutex} y revisa el estado. Si con sus
+    ingredientes y los de la mesa se completa la pareja, decrementa el
+    contador del ingrediente y despierta al fumador correspondiente.
+    
+    Cada vez que un agente corre, es como si creara dos \emph{pushers} con
+    un ingrediente cada uno y los enviara a una habitación con los demás.
+    Con el \emph{mutex,} entran uno a la vez a una habitación donde hay una
+    mesa y tres fumadores dormidos. Cada \emph{pusher} revisa la mesa y, si
+    puede completar la pareja, se lo lleva y despierta al fumador correcto;
+    si no, deja su ingrediente y se va sin despertar a nadie. Se menciona
+    que este es un patrón que aparece en otros problemas, que llaman
+    \emph{scoreboard}. Las variables funcionan para mantener un control del
+    estado del sistema, mientras cada hilo pasa por el \emph{mutex}, revisa
+    el estado (\emph{scoreboard}) y reacciona en consecuencia, sin necesidad
+    de comunicarse con otros hilos. El código modificado para el
+    \emph{pusher A} es:
+    
+    \imagen{./56ccc3d2c959c4742fc7288eda65ef28821a72dc.png}
+
+\section*{Barbershop problem}
+
+    Este problema fue propuesto por Dijkstra. El problema de la barbería
+    plantea un local con una sala de espera de n sillas y un cuarto con la
+    silla del barbero. Si no hay clientes, el barbero duerme; si un cliente
+    llega y todas las sillas están ocupadas, se va; si el barbero está
+    ocupado, pero hay sillas libres, el cliente espera sentado; y si el
+    barbero duerme, el cliente lo despierta. Se dice que los clientes
+    invocan \emph{getHairCut}, que un cliente que llega a una barbería llena
+    invoca \emph{balk} (se va), y que el barbero invoca \emph{cutHair}.
+    Además, que mientras el barbero invoca \emph{cutHair}, exactamente un
+    hilo debe estar invocando \emph{getHairCut}.
+    
+    Se usa un contador customers con el número de clientes en la barbería,
+    protegido por un \emph{mutex}, y un límite de n, que son las sillas de
+    espera más la silla del barbero. Además, hay cuatro semáforos que forman
+    dos \emph{rendezvous}: customer y barber para comenzar el corte, y
+    \emph{customerDone} y \emph{barberDone} para terminarlo. Los nombres
+    siguen la convención de que \emph{customer.wait()} significa ``esperar a
+    un cliente''.
+    
+    \imagen{./fe80adb7c471fbfc39c1db48c5dbad1de07cd068.png}
+    
+    La solución del cliente es que consulta el marcador (\emph{scoreboard})
+    bajo el \emph{mutex}; si la barbería está llena, libera el \emph{mutex}
+    y se va; si no, incrementa el contador. Luego avisa al barbero y espero
+    a que lo llame. Después recibe el corte y avisa que terminó, espera la
+    confirmación del barbero y decrementa el contador.
+    
+    \imagen{./0816dc7b8bdc5274245b2e04f4211a4180300708.png}
+    
+    La solución del barbero es esperar a un cliente con
+    \emph{customer.wait()}, lo llama con \emph{barber.signal()}, le corta el
+    pelo, espera a que el cliente termine con \emph{customerDone.wait()} y
+    confirma con \emph{barberDone.signal()}. Si hay clientes esperando, la
+    siguiente iteración no duerme.
+    
+    \imagen{./e6e11a5ed1e78546637b7c9560128a31c8f1c788.png}
+    
+\section*{FIFO Barbershop}
+
+    La solución anterior de la barbería no garantiza que los clientes sean
+    atendidos en el orden en que llegan. Hasta n clientes pueden pasar el
+    torniquete, avisar al barbero y quedarse esperando en el mismo semáforo.
+    Cuando el barbero señala, cualquiera de los que espera puede despertar.
+    El problema es modificar la solución para que los clientes sean
+    atendidos en el orden en que llegan.\\
+    La solución consiste en que, en lugar de que todos los clientes esperen
+    un semáforo compartido, cada cliente tiene su propio semáforo. Al pasar
+    el torniquete, el cliente deja ese semáforo en una cola. Cuando el
+    barbero está listo, saca de la cola el semáforo del primer cliente. De
+    este modo, el barbero es el que decide a quién atender y no el sistema.
+    
+    \imagen{./b14a35ea5ecafa7067bc653cd8fdb585b74df935.png}
+    
+    El código del cliente crea su semáforo, toma el mutex, verifica la
+    capacidad y, si hay lugar, incrementa el contador y agrega su semáforo a
+    la cola. Después avisa al barbero y espera en su propio semáforo. Cuando
+    es atendido, el resto queda igual.
+    
+    \imagen{./d6fd91101b5fa7373aeb22bfdb9dfd5a4e251bcd.png}
+    
+    El código del barbero espera a un cliente con customer.wait(), toma el
+    mutex, saca el primer semáforo de la cola, suelta el mutex y lo señala.
+    El resto queda igual.
+    
+    \imagen{./21c51460d53a925216bb67e3bbd4147df24eed83.png}
+
+\section*{Hilzer's Barbershop problem}
+
+    Este problema presentado por William Stallings es una versión más
+    complicada del problema de la barbería. La barbería tiene tres sillas,
+    tres barberos y una sala de espera con un sillón para cuatro personas
+    más espacio para esperar parado. La capacidad máxima de clientes
+    esperando en la tienda es de 20, y quienes lleguen cuando está llena no
+    entran. Los clientes esperan de pie, luego se sientan en el sillón y
+    luego pasan a la silla para el corte de pelo. El que más tiempo lleva en
+    cada etapa es el primero en avanzar, al igual que en \emph{FIFO}. Al
+    terminar, cualquier barbero cobra, pero solo hay una caja, entonces solo
+    se cobra a un cliente a la vez.
+    
+    Existen las siguientes restricciones:
+    
+    \begin{itemize}
+    \item
+      Los clientes invocan estas funciones en orden: \emph{enterShop,
+      sitOnSofa, getHairCut, pay.}
+    \item
+      Los barberos invocan: \emph{cutHair} y \emph{acceptPayment.}
+    \item
+      Los clientes no pueden invocar \emph{enterShop} si la tienda está
+      llena.
+    \item
+      Si el sillón está lleno, un cliente que llega no puede invocar
+      \emph{sitOnSofa}.
+    \item
+      Cuando un cliente invoca \emph{getHairCut}, debe haber un barbero
+      concurrente ejecutando \emph{cutHair}, y viceversa.
+    \item
+      Debe ser posible que hasta tres clientes concurrentes ejecuten
+      \emph{getHairCut} y que hasta tres barberos ejecuten \emph{cutHair}.
+    \item
+      Los clientes deben pagar (\emph{pay}) antes de que un barbero pueda
+      \emph{acceptPayment}.
+    \item
+      El barbero debe \emph{acceptPayment} antes de que el cliente pueda
+      irse.
+    \end{itemize}
+    
+    La solución aplica dos veces la técnica \emph{FIFO}: cada cliente tiene
+    un semáforo propio por cada cola, de modo que el barbero decide a quién
+    llamar y se respeta el orden. En la \emph{queue1}, el barbero saca al
+    cliente más antiguo y espera a que el siguiente se siente en el sillón.
+    En el \emph{queue2}, el cliente que lleva más tiempo en el sillón lo
+    manda a la silla. Cada barbero atiende un cliente por vuelta, de modo
+    que hay tres cortes concurrentes. El cliente verifica la capacidad y se
+    mete en \emph{queue1}, avisa y espera su turno, se sienta en el sillón,
+    avisa al barbero, se anota en \emph{queue2}, espera la silla, libera su
+    lugar en el sillón, se corta el pelo y paga. El barbero espera a un
+    cliente de la \emph{queue1}, lo deja pasar al sillón, luego espera a uno
+    de la \emph{queue2}, lo llama a la silla, le corta el pelo y acepta y
+    confirma el pago.
+    
+    \imagen{./527895935f52ec64399d2130f78cd378334469c8.png}
+    \imagen{./a2abf6e5e5d873082fd23d447ecc63d87bb58f6b.png}
+    \imagen{./e184ad98327fea4b9177d504ec86ddca15939b9a.png}
+    
+\end{document}
